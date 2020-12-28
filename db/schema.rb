@@ -21,32 +21,10 @@ ActiveRecord::Schema.define(version: 2020_12_27_042117) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "admins", force: :cascade do |t|
-    t.string "email"
-    t.string "encrypted_password"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "cart_items", force: :cascade do |t|
     t.integer "item_id"
     t.integer "customer_id"
     t.integer "amount"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "customers", force: :cascade do |t|
-    t.string "last_name"
-    t.string "first_name"
-    t.string "last_name_kana"
-    t.string "first_name_kana"
-    t.string "email"
-    t.string "encrypted_password"
-    t.string "postal_code"
-    t.string "address"
-    t.string "telephone_number"
-    t.boolean "is_active"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
